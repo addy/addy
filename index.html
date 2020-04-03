@@ -9,6 +9,15 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      @import url(https://rsms.me/inter/inter.css);
+      @supports (font-variation-settings: normal) {
+        a {
+          font-family: "Inter var", sans-serif;
+          font-feature-settings: "ss01" 1, "kern" 1, "liga" 1, "zero" 1,
+            "cv03" 1, "cv02" 1, "cv04" 1, "tnum" 1;
+        }
+      }
+
       html,
       body {
         height: 100%;
@@ -16,8 +25,7 @@
         text-align: center;
       }
 
-      h1,
-      a {
+      h1 {
         font-family: "Space Mono", monospace;
       }
 
@@ -28,6 +36,10 @@
         height: 100%;
       }
 
+      .container > .row {
+        margin-bottom: 5px;
+      }
+
       .row {
         display: flex;
         justify-content: center;
@@ -35,23 +47,17 @@
 
       .row > a {
         margin: 0 5px 0 5px;
+        color: gray;
+        text-decoration: none;
+      }
+
+      .row > a:hover {
+        color: #222;
+        background: #eee;
       }
 
       @import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
     </style>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-136081513-4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-136081513-4");
-    </script>
   </head>
   <body>
     <div class="box">
@@ -61,7 +67,9 @@
           <a href="https://github.com/addy">Github</a>
           <a href="https://twitter.com/addyluxe">Twitter</a>
           <a href="https://linkedin.com/in/addison-shaw-9a3759101/">LinkedIn</a>
-          <a href="https://addy.sh/pgp.txt">PGP</a>
+        </div>
+        <div class="row">
+          <a href="https://addy.sh/pgp.txt">0x7CCC6AECBD126317</a>
         </div>
       </div>
     </div>
